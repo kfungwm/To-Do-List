@@ -13,6 +13,10 @@ $("input[type='text']").keypress(function(event) {
   if(event.which === 13) {
     var todoText = $(this).val();
     $(this).val("");
-    $("ul").append("<li><span>X</span> " + todoText + "</li>");
+    $("ul").append("<li><span><i class='glyphicon glyphicon-minus-sign'></i></span> " + todoText + "</li>");
   }
+});
+
+$(".glyphicon-plus-sign").click(function(){
+  $("input[type='text']").fadeToggle();
 });
